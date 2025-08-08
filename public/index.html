@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Expense Tracker</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>💰 Expense Tracker</h1>
+
+    <!-- Expense Form -->
+    <form id="expenseForm" class="card">
+      <div class="form-group">
+        <input type="number" id="amount" placeholder="Amount (₹)" required>
+      </div>
+      <div class="form-group">
+        <input type="text" id="category" placeholder="Category" required>
+      </div>
+      <div class="form-group">
+        <input type="text" id="description" placeholder="Description">
+      </div>
+      <div class="form-group">
+        <input type="date" id="date">
+      </div>
+      <button type="submit" class="btn">Add Expense</button>
+    </form>
+
+    <!-- Summary Section -->
+    <div class="summary-section card">
+      <h2>📊 Summary</h2>
+      <button class="btn secondary" onclick="fetchSummary()">Get All Expenses</button>
+      <div id="summary" class="summary-list"></div>
+    </div>
+
+    <!-- Export Section -->
+    <div class="export-section card">
+      <h2>📁 Export</h2>
+      <button class="btn export" onclick="exportCSV()">Export CSV</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
